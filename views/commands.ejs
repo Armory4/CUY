@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <%- include("partials/navigation.html") -%>
+    <h1><%= h1 %></h1>
+    <div class="list-group" id="myList" role="tablist">
+        <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
+        <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
+      </div>
+      
+      <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel">...</div>
+        <div class="tab-pane" id="profile" role="tabpanel">...</div>
+        <div class="tab-pane" id="messages" role="tabpanel">...</div>
+        <div class="tab-pane" id="settings" role="tabpanel">...</div>
+      </div>
+      
+      <script>
+        var firstTabEl = document.querySelector('#myTab a:last-child')
+        var firstTab = new bootstrap.Tab(firstTabEl)
+      
+        firstTab.show()
+      </script>
+
+<script type="text/javascript" src="./../index.js">
+var txt2 = document.getElementById("lal");
+
+
+txt2.onclick = function(){
+	var txt = document.getElementById("lul");
+	console.log(txt)
+}
+</script>
+</body>
+</html>
